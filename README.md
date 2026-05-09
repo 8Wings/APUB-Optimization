@@ -1,2 +1,35 @@
-# APUB-Optimization
-This repository provides a implementation of APUB (ICML 2026), a novel framework for stochastic programming that minimizes an upper confidence bound (UCB) on the expected random cost, acting as a robustness-seeking strategy.
+# Minimizing Upper Confidence Bounds: A Data-Driven Framework for Stochastic Programming
+This repository provides a implementation of [APUB](https://openreview.net/forum?id=eXLcL70GXO&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICML.cc%2F2026%2FConference%2FAuthors%23your-submissions)) (ICML 2026), a novel framework for stochastic programming that minimizes an upper confidence bound (UCB) on the expected random cost, acting as a robustness-seeking strategy. We also develop practical solution methods, including a bootstrap sampling approximation method and an L-shaped method, to solve APUB optimization problems, with a specific focus on two-stage linear stochastic optimization with random recourse. Empirical demonstrations on a two-stage product mix problem reveal the significant benefits of our APUB optimization framework, which fortifies the process against epistemic uncertainty while reinforcing key decision-making attributes like reliability and consistency.
+
+## Instructions
+Install dependencies. This repository is tested with Windows11 and Python 3.8.
+
+```
+pip install -r requirements.txt
+```
+
+We provide 120,140,480 and 960 data size files that used in the paper, to run the code, unzip the data files under the root directory of the project firstly. 
+
+Before running the code, make sure you have a licensed Gurobi.
+
+To reproduce the results reported in our paper, please simply run:
+```
+python main.py
+```
+In addition, you can uncomment the corresponding lines in main.py to evaluate the time efficiency of our algorithm.
+
+
+
+## Citation
+If you find this code useful, please consider citing:
+
+```
+@inproceedings{
+shixin2026minimizing,
+title={Minimizing Upper Confidence Bounds: A Data-Driven Framework for Stochastic Programming},
+author={Shixin Liu and Ming Gao and Jian Hu},
+booktitle={Forty-third International Conference on Machine Learning},
+year={2026},
+url={https://openreview.net/forum?id=eXLcL70GXO}
+}
+```
